@@ -40,6 +40,7 @@ define(function() {
 
     prepend : function(arr, item) {
         return [item].concat(arr);
+        // return arr.unshift(item); doesn't pass the test
     },
 
     curtail : function(arr) {
