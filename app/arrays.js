@@ -13,12 +13,19 @@ define(function() {
     },
 
     remove : function(arr, item) {
-        arr.splice(arr.indexOf(item), 1);
-        return arr;
+        
     },
 
     removeWithoutCopy : function(arr, item) {
-
+        for (i = 0, len = arr.length; i < len; i++) {
+            if (arr[i] === item) {
+              arr.splice(i, 1);
+              i = i - 1;
+              len = len - 1;
+            }
+        }
+        // arr.splice(arr.indexOf(item), 1);
+        return arr;
     },
 
     append : function(arr, item) {
