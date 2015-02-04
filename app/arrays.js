@@ -21,7 +21,7 @@ define(function() {
     },
 
     append : function(arr, item) {
-
+        return arr.push(item);
     },
 
     truncate : function(arr) {
@@ -41,19 +41,27 @@ define(function() {
     },
 
     insert : function(arr, item, index) {
-
+        return arr.splice(index, 0, item);
     },
 
     count : function(arr, item) {
-
+        var count = 0;
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] === item) {
+                count += 1;
+            }
+        }
+        return count;
     },
 
     duplicates : function(arr) {
-
+        
     },
 
     square : function(arr) {
-
+        return arr.map(function(el) {
+            return el * el;
+        });
     },
 
     findAllOccurrences : function(arr, target) {
