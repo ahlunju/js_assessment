@@ -15,7 +15,7 @@ define(function() {
     },
 
     multiply: function(a, b) {
-
+        
     }
   };
 });
